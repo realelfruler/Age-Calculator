@@ -11,7 +11,7 @@ let date = new Date();
 let todaysMonth = date.getMonth();
 let todaysDay = date.getDate();
 let todaysYear = date.getFullYear();
-let todaysDate = `Today's date is ${monthsOfTheYear[todaysMonth - 1]} ${todaysDay}, ${todaysYear}`;
+let todaysDate = `Today's date is ${monthsOfTheYear[todaysMonth]} ${todaysDay}, ${todaysYear}`;
 
 let monthAmt = todaysMonth - birthMonth;
 let dayAmt = todaysDay - birthDay;
