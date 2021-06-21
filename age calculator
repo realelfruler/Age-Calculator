@@ -20,8 +20,11 @@ let yearAmt = todaysYear - birthYear;
 if (monthAmt < 0) {
   monthAmt = birthMonth - todaysMonth;
 }
+if (todaysMonth < birthMonth) {
+  yearAmt -= 1;
+}
 
-age = `Today I'm turning ${yearAmt} years, ${monthAmt} months, and ${dayAmt} days years old!`;
+age = `Today I'm turning ${yearAmt} years, ${monthAmt} months, and ${dayAmt} days old!`;
 
 console.log(birthDate);
 console.log(todaysDate);
