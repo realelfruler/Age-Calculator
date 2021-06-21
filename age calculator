@@ -2,19 +2,24 @@ let age = [];
 const monthsOfTheYear = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
 //birth month can be whatever you want it to be -- this one's mine
-const birthMonth = 10;
-const birthDay = 17;
-const birthYear = 2003;
+let birthMonth = 10;
+let birthDay = 17;
+let birthYear = 2003;
 let birthDate = `My birthday is ${monthsOfTheYear[birthMonth - 1]} ${birthDay}, ${birthYear}`;
 
-const todaysMonth = Date.prototype.getMonth();
-const todaysDay = Date.prototype.getDate();
-const todaysYear = Date.prototype.getFullYear();
-const todaysDate = `Today's date is ${monthsOfTheYear[todaysMonth - 1]} ${todaysDay}, ${todaysYear}`;
+let date = new Date();
+let todaysMonth = date.getMonth();
+let todaysDay = date.getDate();
+let todaysYear = date.getFullYear();
+let todaysDate = `Today's date is ${monthsOfTheYear[todaysMonth - 1]} ${todaysDay}, ${todaysYear}`;
 
-const monthAmt = todaysMonth - birthMonth;
-const dayAmt = todaysDay - birthDay;
-const yearAmt = todaysYear - birthYear;
+let monthAmt = todaysMonth - birthMonth;
+let dayAmt = todaysDay - birthDay;
+let yearAmt = todaysYear - birthYear;
+
+if (monthAmt < 0) {
+  monthAmt = birthMonth - todaysMonth;
+}
 
 age = `Today I'm turning ${yearAmt} years, ${monthAmt} months, and ${dayAmt} days years old!`;
 console.log(age);
