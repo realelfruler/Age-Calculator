@@ -22,4 +22,7 @@ if (monthAmt < 0) {
 }
 
 age = `Today I'm turning ${yearAmt} years, ${monthAmt} months, and ${dayAmt} days years old!`;
+
+console.log(birthDate);
+console.log(todaysDate);
 console.log(age);
