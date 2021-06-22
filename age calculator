@@ -1,31 +1,29 @@
-let age = [];
-const monthsOfTheYear = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+const ageCalculator = (birthMonth, birthDay, birthYear) => {
+  const monthsOfTheYear = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
-//birth month can be whatever you want it to be -- this one's mine
-let birthMonth = 10;
-let birthDay = 17;
-let birthYear = 2003;
-let birthDate = `My birthday is ${monthsOfTheYear[birthMonth - 1]} ${birthDay}, ${birthYear}`;
+  let birthDate = `My birthday is ${monthsOfTheYear[birthMonth - 1]} ${birthDay}, ${birthYear}`;
 
-let date = new Date();
-let todaysMonth = date.getMonth();
-let todaysDay = date.getDate();
-let todaysYear = date.getFullYear();
-let todaysDate = `Today's date is ${monthsOfTheYear[todaysMonth]} ${todaysDay}, ${todaysYear}`;
+  let date = new Date();
+  let todaysMonth = date.getMonth();
+  let todaysDay = date.getDate();
+  let todaysYear = date.getFullYear();
+  let todaysDate = `Today's date is ${monthsOfTheYear[todaysMonth]} ${todaysDay}, ${todaysYear}`;
 
-let monthAmt = todaysMonth - birthMonth;
-let dayAmt = todaysDay - birthDay;
-let yearAmt = todaysYear - birthYear;
+  let monthAmt = todaysMonth - birthMonth;
+  let dayAmt = todaysDay - birthDay;
+  let yearAmt = todaysYear - birthYear;
 
-if (monthAmt < 0) {
-  monthAmt = birthMonth - todaysMonth;
-}
-if (todaysMonth < birthMonth) {
-  yearAmt -= 1;
-}
+  if (monthAmt < 0) {
+    monthAmt = birthMonth - todaysMonth;
+  }
 
-age = `Today I'm turning ${yearAmt} years, ${monthAmt} months, and ${dayAmt} days old!`;
+  if (todaysMonth < birthMonth) {
+    yearAmt -= 1;
+  }
 
-console.log(birthDate);
-console.log(todaysDate);
-console.log(age);
+  let age = `Today I'm turning ${yearAmt} years, ${monthAmt} months, and ${dayAmt} days old!`;
+
+  console.log(birthDate);
+  console.log(todaysDate);
+  return(age);
+};
